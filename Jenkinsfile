@@ -14,5 +14,11 @@ pipeline {
         sh 'uptime'
       }
     }
+    stage ('Final') {
+      steps {
+        echo 'Running a Final touch test now ...'
+        sh 'uname -a'
+      }
+    }
   }
 }
