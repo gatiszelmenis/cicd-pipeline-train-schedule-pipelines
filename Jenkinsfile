@@ -8,5 +8,11 @@ pipeline {
         archiveArtifacts artifacts: 'dist/trainSchedule.zip'
       }
     }
+    stage ('test') {
+      steps {
+        echo 'Running a build test now ...'
+        sh 'uptime'
+      }
+    }
   }
 }
